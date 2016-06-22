@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<!-- HEAD -->
+    <head>
+	    <title>Malcolm Navarro</title>
+    	<!--Import material design icons font-->
+        <link href="css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
+        <!--Import geomanist font-->
+        <link href="css/geomanist.css" media="all" rel="stylesheet" type="text/css" />
+        <!--Import cssssss-->
+        <link rel="stylesheet" href="css/materialize.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+	<!-- BODY -->
+    <body>
+	    <!-- CONTACT MODAL -->
+		<div id="contact-modal" class="modal">
+		    <div class="modal-content">
+		        <h4 class="center-align">Get In Touch</h4>
+			</div>
+			
+			<form action="contact.php" method="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="input-field col s12 m4">
+                            <input id="contact_name" type="text" name="contact_name" class="validate"> <label for="contact_name">Name</label>
+                        </div>
+
+                        <div class="input-field col s12 m5">
+                            <input id="contact_email" type="email" name="contact_email" class="validate"> <label for="contact_email">Email Address</label>
+                        </div>
+                        
+                        <div class="input-field col s12 m3">
+                            <input id="contact_phone" type="tel" name="contact_phone" class="validate"> <label for="contact_phone">Phone (#)</label>
+                        </div>
+
+
+                        <div class="input-field col s12">
+                            <textarea id="msg" class="materialize-textarea" name="msg" length="1738" style="height:100px;">
+</textarea> <label for="msg">Message</label>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12 m12 center">
+                                <button class="btn waves-effect waves-light white-text topbottom green" type="submit" name="submit">
+                                	<i class="mdi mdi-send"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+		</div>
+		
+		<!-- RESUME MODAL -->
+		<div id="resume-modal" class="modal">
+		    <div class="modal-content">
+		        <h4 class="center-align">Resum&eacute;</h4>
+		    </div>
+		    <iframe src="resume.pdf" width="100%" height="60%" onload="scroll(0,0);">
+				This browser does not support PDFs. Please download the PDF to view it: <a href="/pdf/sample-3pp.pdf">Download PDF</a>
+			</iframe>
+			
+			<div class="row">
+                <div class="col s12 m12 center">
+                	<a class="btn waves-effect waves-light white-text top green" href="resume.pdf" download="malcolmnavarro.pdf">
+                        <i class="mdi mdi-cloud-download"></i>
+                	</a>
+                </div>
+            </div>
+
+		</div>
+	    
+	    <div class="middlemiddle">
+		    <!-- NAME -->
+		    <div class="name">
+			    <h1>Malcolm Navarro</h1>
+			</div>
+		    
+		    <!-- BTNS -->
+		    <div class="row">
+			    <div class="col l3 s6">
+				      <a class="btn-floating btn-large waves-effect waves-light amber" id="click1"><i class="mdi mdi-file-document-box"></i></a>
+			    </div>
+			    <div class="col l3 s6">
+				      <a class="btn-floating btn-large waves-effect waves-light blue" id="click2"><i class="mdi mdi-linkedin-box"></i></a>
+			    </div>
+			    <div class="col l3 s6">
+				      <a class="btn-floating btn-large waves-effect waves-light purple" id="click3"><i class="mdi mdi-github-box"></i></a>
+			    </div>
+			    <div class="col l3 s6">
+				      <a class="btn-floating btn-large waves-effect waves-light green" id="click4"><i class="mdi mdi-contact-mail"></i></a>
+			    </div>
+		    </div>
+		    
+		    
+	    </div>
+	    
+		<!-- Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        
+        <!-- CLICK LISTENERS -->
+	    <script>
+		    $( "#click1" ).click(function() {
+				$('#resume-modal').openModal();
+			});
+			$( "#click2" ).click(function() {
+				window.location.href = "https://www.linkedin.com/in/malcolm-navarro-804706a2";
+			});
+			$( "#click3" ).click(function() {
+				window.location.href = "http://github.com/mmnavarr";
+			});
+			$( "#click4" ).click(function() {
+				$('#contact-modal').openModal();
+			});
+		</script>
+    </body>
+    
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+    
+    
+</html>
